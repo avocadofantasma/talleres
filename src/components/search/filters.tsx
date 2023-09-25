@@ -65,11 +65,14 @@ export const Filters = () => {
             </AccordionHeader>
             <AccordionBody>
               <List>
-                {filters[key].map(({ name, link, slug, id }) => (
-                  <ListItem key={name}>
-                    <Link href={`/${key}/${slug}`}>{name}</Link>
-                  </ListItem>
-                ))}
+                {
+                  //@ts-ignore
+                  filters[key].map(({ name, link, slug, id }) => (
+                    <ListItem key={name}>
+                      <Link href={`/${key}/${slug}`}>{name}</Link>
+                    </ListItem>
+                  ))
+                }
               </List>
             </AccordionBody>
           </Accordion>

@@ -13,13 +13,13 @@ const SearchBar = () => {
   const [query, setQuery] = useState('');
   const router = useRouter();
   const inputRef = React.useRef(null);
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: any) => {
     if (event.key === 'Enter') {
       handleSearchClick();
     }
   };
 
-  const onChange = ({ target }) => setQuery(target.value);
+  const onChange = ({ target }: any) => setQuery(target?.value);
 
   const handleSearchClick = () => {
     if (!query) return;
